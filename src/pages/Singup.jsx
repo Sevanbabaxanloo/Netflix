@@ -5,7 +5,7 @@ import { UserAuth } from "../context/AuthContext";
 const Singup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signUp } = UserAuth(); 
+  const { signUp } = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -24,7 +24,7 @@ const Singup = () => {
         <img
           className="hidden sm:block absolute w-full h-full object-cover"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/ca6a7616-0acb-4bc5-be25-c4deef0419a7/bedd8a27-c940-478c-8c55-375ade681293/AM-en-20231211-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="Background image" 
+          alt="Netflix promotional background"
         />
         <div className="bg-black/60 fixed top-0 left-0 w-full h-screen"></div>
         <div className="fixed w-full px-4 py-24 z-90">
