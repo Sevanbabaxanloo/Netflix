@@ -7,8 +7,7 @@ const style = {
   logo: `w-[100px] max-sm:w-[70px] cursor-pointer`,
   mainContainer: `flex items-center px-[32px] max-sm:px-[5px] py-[24px]`,
   navContainer: `flex items-center justify-between w-full`,
-  text: `text-white tracking-[1px]`,
-  nav: `flex gap-[1.5vw]`,
+  // If style.text and style.nav are not used elsewhere, consider removing them
   container: `flex items-center`,
   icons: `text-white`,
   singin: `font-sans text-white bg-red-500 p-[5px] m-[5px] w-[80px] rounded-[5px] max-sm:text-[12px]  max-sm:w-[55px]`,
@@ -34,7 +33,7 @@ const Navbar = () => {
         <div className={style.navContainer}>
           <div>
             <Link to="/">
-              <img src={logo} className={style.logo} />
+              <img src={logo} alt="Logo" className={style.logo} />
             </Link>
           </div>
           <div className={style.container}>
@@ -43,7 +42,9 @@ const Navbar = () => {
                 <Link to="/account">
                   <button className={style.singin}>Account</button>
                 </Link>
-                <button onClick={handleSignOut} className={style.singin}>Logout</button>
+                <button onClick={handleSignOut} className={style.singin}>
+                  Logout
+                </button>
               </div>
             ) : (
               <div>

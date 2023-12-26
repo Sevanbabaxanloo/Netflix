@@ -5,7 +5,7 @@ import { UserAuth } from "../context/AuthContext";
 const Singup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, signUp } = UserAuth();
+  const { signUp } = UserAuth(); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,19 +17,20 @@ const Singup = () => {
       console.log(error);
     }
   };
+
   return (
     <>
       <div className="w-full h-screen font-sans">
         <img
           className="hidden sm:block absolute w-full h-full object-cover"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/ca6a7616-0acb-4bc5-be25-c4deef0419a7/bedd8a27-c940-478c-8c55-375ade681293/AM-en-20231211-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
-          alt="/"
+          alt="Background image" 
         />
         <div className="bg-black/60 fixed top-0 left-0 w-full h-screen"></div>
         <div className="fixed w-full px-4 py-24 z-90">
           <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white mt-[50px] max-sm:mt-0">
             <div className="max-w-[320px] mx-auto py-16 max-sm:py-0">
-              <h1 className="text-3xl font-bold ">Sing Up</h1>
+              <h1 className="text-3xl font-bold ">Sign Up</h1>
               <form
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col py-4 gap-5 max-sm:gap-2"
@@ -61,7 +62,7 @@ const Singup = () => {
                   <span className="text-gray-600">
                     Already subscribed to Netflix?
                   </span>
-                  <Link to="/login">Sing In</Link>
+                  <Link to="/login">Sign In</Link>
                 </p>
               </form>
             </div>
@@ -71,4 +72,5 @@ const Singup = () => {
     </>
   );
 };
+
 export default Singup;
